@@ -1,54 +1,38 @@
-# React + TypeScript + Vite
+# 🛫 Google Flights Clone
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A fast, beautiful, and responsive Google Flights-inspired web app that lets you search for flights using the [Sky-Scrapper API](https://rapidapi.com/apiheya/api/sky-scrapper). Built in **4 days** with a product-first mindset and zero fluff.
 
-Currently, two official plugins are available:
+## 🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- 🔍 Search for flights by origin, destination, and date
+- 📅 Smart date inputs with trip type (round trip/one way)
+- 🌍 Select passenger count and travel class
+- ⚡ Real-time results from the Sky-Scrapper API
+- 🌓 Theme toggle: light, dark, system
+- 💻 Fully responsive — mobile to desktop
+- 🎯 Clean UI inspired by Google Flights
+- 🧠 Built with a scalable architecture (modular, maintainable)
 
-## Expanding the ESLint configuration
+## 🛠 Tech Stack
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **Vite + React** — Fast dev experience
+- **TailwindCSS** — Utility-first styling with full design control
+- **Axios** — API calls made simple
+- **React Hook Form** — Robust form handling
+- **Headless UI** — Custom dropdowns without opinionated styles
+- **Sky-Scrapper API** via RapidAPI — Real-time flight data
+- **Framer Motion** (optional) — Smooth subtle animations
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## 🧩 Folder Structure
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+```bash
+src/
+│
+├── components/      # Reusable components (Form, Navbar, FlightCard)
+├── pages/           # Page-level components
+├── hooks/           # Custom React hooks (e.g., useFlights)
+├── context/         # Theme & App state context
+├── api/             # Axios instances & API handlers
+├── assets/          # Images, icons, etc.
+├── App.tsx          # App shell
+└── main.tsx         # Entry point
